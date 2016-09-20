@@ -1,0 +1,10 @@
+The script "startSoftIOCs-procserv.sh" is meant to be used in conjunction with the "siocs" init script to start a collection of soft IOCs on boot.  
+To implement this, place the siocs init script on the IOC server in /etc/init.d and execute the following command as root to run it at boot time:
+chkconfig --add siocs
+
+Edit the "area" and "user" fields accordingly.  "area" will be passed as an argument to the startSoftIOCs-procserv.sh script and the soft IOCs will be run as "user".
+
+This script will run in runlevel 3.  
+All IOC entries in the $SETUP/procserv/table.txt with the "boot" field equal to 1 will be started on boot.
+
+

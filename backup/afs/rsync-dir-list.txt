@@ -1,0 +1,27 @@
+# List of directories to be backed up.
+# Use the full path with a trailing backslash.
+# 
+/afs/slac/g/testfac/extras/scripts/
+/afs/slac/g/testfac/home/
+/afs/slac/g/testfac/rhel6/epics/R3.14.12.4/iocTop/
+/afs/slac/g/testfac/rhel6/epics/R3.14.12.4/modules/
+/afs/slac/g/testfac/rhel6/epics/R3.14.12.4/extensions/
+/afs/slac/g/testfac/rhel6/epics/iocCommon/
+/afs/slac/g/testfac/setup/
+/afs/slac/g/testfac/tools/alh/
+/afs/slac/g/testfac/tools/andor/
+/afs/slac/g/testfac/tools/archiveViewer/
+/afs/slac/g/testfac/tools/channelArchiver/
+/afs/slac/g/testfac/tools/digi/
+/afs/slac/g/testfac/tools/display/
+/afs/slac/g/testfac/tools/edm/
+/afs/slac/g/testfac/tools/gateway/
+/afs/slac/g/testfac/tools/ImageJ/
+/afs/slac/g/testfac/tools/labca/
+/afs/slac/g/testfac/tools/matlab/
+/afs/slac/g/testfac/tools/pyEpics/
+/afs/slac/g/testfac/tools/qt/common/
+/afs/slac/g/testfac/tools/qt/qss/
+/afs/slac/g/testfac/tools/rhel6/install/
+/afs/slac/g/testfac/tools/score/
+#/nfs/slac/g/esd/archiver/tarf/viewer_config/

@@ -1,0 +1,11 @@
+.Trash
+.thumbnails
+.adobe
+.kde
+.metacity
+*core*
+*crash*
+.local/share/Trash
+.cache
+indextool_active.lck
+*_caLab_*

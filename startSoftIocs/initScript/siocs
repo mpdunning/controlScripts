@@ -1,0 +1,71 @@
+#!/bin/bash
+#
+# chkconfig: 345 99 01 
+# description: Starts soft IOCs
+# processname: siocs
+#
+
+# Source function library.
+. /etc/rc.d/init.d/functions
+
+RETVAL=0
+user=nlcta
+area=nlcta
+scriptDir=/afs/slac/g/testfac/extras/scripts/startSoftIocs
+script=$scriptDir/startSoftIocs-procServ.sh
+
+
+start()
+{
+    echo "Starting Soft IOCs..."
+    su - $user -c "$script -s $area &"
+    RETVAL=$?
+    return $RETVAL
+}
+
+stop()
+{
+    echo "Killing Soft IOCs..."
+    su - $user -c "$script -k $area &"
+    RETVAL=$?
+    return $RETVAL
+}
+
+status()
+{
+    if [ "`$script -l $area | wc -l`" -eq 1 ]; then
+        echo "No Soft IOCs running"
+    else
+        echo "Active Soft IOCs: `$script -l $area | wc -l` total"
+	echo 'To list, use: iocControl -l'
+        echo "#################################"
+        #$script -l $area
+    fi
+    RETVAL=$?
+    return $RETVAL
+}
+
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    restart)
+        stop
+        sleep 2
+        start
+        ;;
+    status)
+        status
+        ;;
+    *)
+        echo $"Usage: $0 {start|stop|restart|status}"
+        exit 1
+        ;;
+esac
+
+exit $RETVAL
+

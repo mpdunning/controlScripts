@@ -1,0 +1,3 @@
+Backups of certain afs files are done daily, weekly, and monthly.  Directories are read from rsync-dir-list.txt and written to nfs.
+Directories may be added at will, just make sure they have trailing slashes
+-M. Dunning, 2/12/12

@@ -1,0 +1,7 @@
+*core*
+*.svn*
+*.cvs*
+*/CVS*
+*/hide*
+.__afs*
+qt-everywhere-opensource-src*
